@@ -1,0 +1,15 @@
+
+<h1>edit image form</h1>
+
+<form action="/images/<%= image['id'] %>" method="post">
+
+  <input type="hidden" name="_method" value="patch">
+
+  <label for="">name</label>
+  <input type="text" name="name" value="<%= image['name'] %>">
+  <label for="">image url</label>
+  <input type="text" name="image_url" value="<%= image['image_url'] %>">
+  <label for="">description</label>
+  <input type="text" name="description" value="<%= image['description'] %>">
+  <button>update</button>
+</form>

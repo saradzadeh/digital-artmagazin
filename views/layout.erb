@@ -8,7 +8,30 @@
 </head>
 <body>
 
+  <%  if logged_in? %>
+  logged in as <%= current_user()['email'] %>
+
+  <form action="/logout" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button>logout</button>
+  </form>
+
+    <% end %>
+
+
+
+  <header>
+  <p>DIGITAL ART MAGAZINE</p>
+  <p>logo</p>
+  </header>
+
   <%= yield %>
+
+  <footer>
+  <p>OCTOBER 2020</p>
+  <p>JOIN US AND BE PART OF OUR MAGAZINE</p>
+  </footer>
+ 
 
 </body>
 </html>

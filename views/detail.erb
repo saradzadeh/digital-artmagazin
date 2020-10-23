@@ -1,0 +1,9 @@
+<h1>details for <%= image['name'] %></h1>
+<p>posted by <%= user['email'] %></p>
+
+<form action="/images/<%= image['id'] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>delete</button>
+</form>
+
+<a href="/images/<%= image['id'] %>/edit">edit</a>
