@@ -1,3 +1,4 @@
+
 def run_sql(sql, params = [])
     db = PG.connect(ENV['DATABASE_URL'] || {dbname: 'project2_db'})
     results = db.exec_params(sql, params)
@@ -38,7 +39,7 @@ def run_sql(sql, params = [])
   end
   
 
-  def update_image(id, name, image_url, description)
-    sql = "update images set name = $1, image_url = $2, description = $3, where id = $4;"
+  def update_image(name, image_url, description, id)
+    sql = "update images set name = $1, image_url = $2, description = $3 where id = $4;"
     run_sql(sql, [name, image_url, description, id])
   end

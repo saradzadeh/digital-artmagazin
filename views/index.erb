@@ -1,15 +1,27 @@
-<h1>Digital Art Magazine</h1>
+ 
 
-<a href="/images/new">post new images</a>
+<img src="firstpage.png" alt="first_page">
+<h1>LOOK AT RECENT WORKS</h1>
+<section class="home">
+
+<nav>
+<a href="/images/new">POST NEW PAGES</a>
+<a href="/issue">ISSUES</a>
+<a href="/about">ABOUT</a>
+<a href="/">HOME</a>
+</nav>
 
 
+<div>
 <% images.each do |image| %>
-
+<img src="<%= image["image_url"] %>">
   <p>
     <a href="/images/<%= image["id"] %>">
       <%= image["name"] %>
     </a>
   </p>
-  <img src="<%= image["image_url"] %>">
+  
 
 <% end %>
+</div>
+</section>

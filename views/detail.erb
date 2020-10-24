@@ -1,3 +1,11 @@
+
+ <nav>
+<a href="/images/new">POST NEW PAGES</a>
+<a href="/issue">ISSUES</a>
+<a href="/about">ABOUT</a>
+<a href="/">HOME</a>
+</nav>
+
 <h1>details for <%= image['name'] %></h1>
 <p>posted by <%= user['email'] %></p>
 
@@ -6,4 +14,10 @@
   <button>delete</button>
 </form>
 
-<a href="/images/<%= image['id'] %>/edit">edit</a>
+
+
+<img src="<%= image["image_url"] %>">
+<a class= "edit" href="/images/<%= image['id'] %>/edit">edit</a>
+<p>
+<%= image["description"] %>
+</p>

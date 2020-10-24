@@ -1,0 +1,19 @@
+ <nav>
+<a href="/images/new">POST NEW PAGES</a>
+<a href="/issue">ISSUES</a>
+<a href="/about">ABOUT</a>
+<a href="/">HOME</a>
+</nav>
+
+<h1>ISSUES</h1>
+
+<% images.each do |image| %>
+
+  <p>
+    <a href="/issue/<%= image["id"] %>">
+      
+    </a>
+  </p>
+  <img src="<%= image["image_url"] %>">
+
+<% end %>

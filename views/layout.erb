@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello World</title>
-  <link rel='stylesheet' href='/stylesheets/main.css'>
+ <link rel="stylesheet" href="/stylesheets/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
 </head>
 <body>
+  <header>
+  <p>DIGITAL ART MAGAZINE</p>
+  
+  </header>
+
 
   <%  if logged_in? %>
   logged in as <%= current_user()['email'] %>
@@ -20,10 +26,7 @@
 
 
 
-  <header>
-  <p>DIGITAL ART MAGAZINE</p>
-  <p>logo</p>
-  </header>
+  
 
   <%= yield %>
 

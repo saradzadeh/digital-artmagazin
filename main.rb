@@ -126,7 +126,7 @@ end
 
 
 patch '/images/:id' do
-  update_image(params['id'], params['image'], params['image_url'], params['description'])
+  update_image(params['name'], params['image_url'], params['description'], params['id'])
   redirect "/images/#{params["id"]}"
   # redirect "/"
 end
@@ -137,3 +137,15 @@ end
 
 #STEP4
 #issues page
+
+
+get '/issue' do
+  images = all_images()
+  erb :issue, locals: { images: images }
+  
+end
+
+
+get '/about' do
+  erb :about
+end
