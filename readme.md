@@ -1,6 +1,6 @@
 # Digital Art Magazine
 
-- website url:
+- website url:https://still-ridge-19152.herokuapp.com/
 
 
 # What is this web_application
